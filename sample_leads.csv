@@ -1,0 +1,3 @@
+organization;contact_name;niche;region;city;district;address;phone;telegram_username;telegram_chat_id;whatsapp_phone;max_user_id;max_chat_id;vk_user_id;vk_peer_id;website;source_url;preferred_channel;notes
+Demo Coffee Point;Ирина;Кофейня;Москва;Москва;Тверской;ул. Примерная, 1;+7 900 000-00-01;demo_coffee_point;;79000000001;;;;;;demo://maps/org/coffee-point;whatsapp;Импорт из CSV
+Demo Beauty Studio;Анна;Салон красоты;Санкт-Петербург;Санкт-Петербург;Центральный;Невский проспект, 10;+7 900 000-00-02;demo_beauty_studio;;79000000002;;;;;;demo://maps/org/beauty-studio;auto;Импорт из CSV

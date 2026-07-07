@@ -1,0 +1,28 @@
+services:
+  api:
+    build:
+      context: .
+      dockerfile: backend/Dockerfile
+    ports:
+      - "8000:8000"
+    env_file:
+      - ./config/secrets.env
+    environment:
+      DATABASE_PATH: /app/data/lidraflow.sqlite3
+    volumes:
+      - ./data:/app/data
+      - ./config/secrets.env:/app/config/secrets.env:ro
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    env_file:
+      - ./config/secrets.env
+    environment:
+      LIDRAFLOW_API_BASE_URL: http://api:8000
+      DISABLE_WEB_AUTH: "false"
+    depends_on:
+      - api
